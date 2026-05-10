@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>DevOps Task Force</title>
+</head>
+<body>
+  <h1>DevOps Task Force</h1>
+
+  <button onclick="testApi()">Probar conexión API</button>
+
+  <pre id="resultado"></pre>
+
+  <script>
+    async function testApi() {
+      const response = await fetch("https://api-devops.taskforce.pe/api/health");
+      const data = await response.json();
+      document.getElementById("resultado").textContent =
+        JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
