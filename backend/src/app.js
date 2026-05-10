@@ -39,7 +39,7 @@ const PORT = process.env.PORT || 3000;
 
 app.post('/api/n8n-test', async (req, res) => {
   try {
-    const response = await fetch('http://n8n:5678/webhook/devops-test', {
+    const response = await fetch('http://n8n:5678/webhook-test/devops-test', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
